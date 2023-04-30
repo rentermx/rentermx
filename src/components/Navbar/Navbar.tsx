@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import {default as MuiButton} from '@mui/material/Button';
 import Button from '../Button/Button';
+import MobileButton from '../MobileButton/MobileButton';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
@@ -16,12 +17,12 @@ import MenuItem from '@mui/material/MenuItem';
 import { styled } from '@mui/material/styles';
 import navbarStyles from './NavbarStyles';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Servicios', 'Nosotros', 'Contacto'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 type Props = {}
 
-const StyledAppBar = styled(AppBar)<AppBarProps>(({ theme }) => navbarStyles('strive'));
+const StyledAppBar = styled(AppBar)<AppBarProps>(({ theme }) => navbarStyles('konfio'));
 
 const Navbar = (props: Props) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -48,24 +49,16 @@ const Navbar = (props: Props) => {
         <Toolbar disableGutters>
           <Typography
             id="navbar-logo-container"
+            className="hidden lg:flex"
             variant="h6"
             noWrap
             component="a"
             href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
           >
-            LOGO
+            NETFLIX
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box className="flex grow lg:hidden" >
             <IconButton
               size="large"
               aria-label="Account of current user"
@@ -79,6 +72,7 @@ const Navbar = (props: Props) => {
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
+              className="block lg:hidden"
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
@@ -90,9 +84,6 @@ const Navbar = (props: Props) => {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -103,29 +94,21 @@ const Navbar = (props: Props) => {
           </Box>
           <Typography
             id="navbar-logo-container"
+            className="flex grow lg:hidden "
             variant="h5"
             noWrap
             component="a"
             href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
           >
-            LOGO
+            NETFLIX
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box className="hidden grow lg:flex" >
             {pages.map((page) => (
               <MuiButton
                 id="navbar-menu-button"
                 key={page}
                 onClick={handleCloseNavMenu}
+                
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
@@ -133,11 +116,16 @@ const Navbar = (props: Props) => {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box className="grow-0">
             <Tooltip title="Open settings">
-              <Button onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                Quiero ser cliente
-              </Button>
+              <div>
+                <Button className='hidden lg:inline-block' onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  Quiero ser cliente
+                </Button>
+                <MobileButton className='inline-block lg:hidden'>
+                  Quiero ser cliente
+                </MobileButton>
+              </div>
             </Tooltip>
             <Menu
               sx={{ mt: '45px' }}

@@ -25,6 +25,23 @@ const navbarStyles = (variant: 'strive' | 'konfio', theme?: Theme): any => ({
   },
   '& .MuiButtonBase-root#navbar-menu-button': {
     color: baseColors.white,
+    '&:hover': {
+      backgroundColor: colors[variant].hover,
+    }
+  },
+  '& #navbar-logo-container': {
+    marginRight: '2rem',
+    fontFamily: 'monospace',
+    fontWeight: 700,
+    letterSpacing: '.3rem',
+    color: 'inherit',
+    textDecoration: 'none',
+  },
+  '@media (min-width: 1300px)': {
+    '& #navbar-logo-container': {
+      backgroundColor: 'blue',
+    },
+    
   }
 
 });
