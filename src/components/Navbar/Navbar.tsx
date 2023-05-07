@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import AppBar, { AppBarProps } from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -27,6 +27,21 @@ const StyledAppBar = styled(AppBar)<AppBarProps>(({ theme }) => navbarStyles('ko
 const Navbar = (props: Props) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+  const [ scrolled, setScrolled ] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+        if (window.scrollY > 50) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    }
+
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll)
+  })
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -44,7 +59,7 @@ const Navbar = (props: Props) => {
   };
 
   return (
-    <StyledAppBar position="static">
+    <StyledAppBar position="static" className={scrolled ? 'scrolled' : ''}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

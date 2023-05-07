@@ -20,30 +20,31 @@ const navbarStyles = (variant: 'strive' | 'konfio', theme?: Theme): any => ({
   backgroundColor: 'transparent',
   position: 'fixed',
   boxShadow: 'none',
+  zIndex: 1000,
+  color: baseColors.black,
+  transition:  '0.32s ease-in-out',
   '& .MuiButtonBase-root': {
     textTransform: 'none'
   },
   '& .MuiButtonBase-root#navbar-menu-button': {
-    color: baseColors.white,
+    fontWeight: 300,
+    color: baseColors.black,
     '&:hover': {
       backgroundColor: colors[variant].hover,
     }
   },
   '& #navbar-logo-container': {
     marginRight: '2rem',
-    fontFamily: 'monospace',
-    fontWeight: 700,
+    fontWeight: 200,
     letterSpacing: '.3rem',
     color: 'inherit',
     textDecoration: 'none',
   },
-  '@media (min-width: 1300px)': {
-    '& #navbar-logo-container': {
-      backgroundColor: 'blue',
-    },
-    
+  '&.scrolled': {
+    backgroundColor: 'white',
+    boxShadow: '0 0 28px hsla(0,0%,50%,.5)',
+    padding: '3px 0'
   }
-
 });
 
 export default navbarStyles;

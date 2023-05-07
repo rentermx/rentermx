@@ -22,7 +22,7 @@ const buttonStyles = (variant: 'strive' | 'konfio', theme?: Theme) => ({
   },
   backgroundColor: colors[variant].main,
   padding: '10px 2rem !important',
-  fontWeight: 600,
+  fontWeight: 300,
   fontSize: '0.875rem',
   borderRadius: '25px',
   border: `2px solid ${colors[variant].main}`,
