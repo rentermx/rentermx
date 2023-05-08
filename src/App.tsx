@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Options from './components/Options/Options';
+import Footer from './components/Footer/Footer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import bgImg from './images/doctor-wallpaper.jpg';
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'Graphik'
+    fontFamily: 'Gilroy'
   }
 });
 
@@ -33,6 +34,7 @@ function App() {
           }}></img>
         </div>
         <Options></Options>
+        <Footer></Footer>
       </Fragment>
     </ThemeProvider>
   );

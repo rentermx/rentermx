@@ -20,11 +20,11 @@ import navbarStyles from './NavbarStyles';
 const pages = ['Servicios', 'Nosotros', 'Contacto'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-type Props = {}
+type NavbarProps = {};
 
 const StyledAppBar = styled(AppBar)<AppBarProps>(({ theme }) => navbarStyles('konfio'));
 
-const Navbar = (props: Props) => {
+const Navbar: React.FC<NavbarProps> = (props) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
   const [ scrolled, setScrolled ] = useState(false);

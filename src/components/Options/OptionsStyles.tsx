@@ -63,17 +63,16 @@ const styles = (variant: 'konfio' | 'strive') => ({
       fontWeight: '300',
       padding: '0 0 2rem 0'
     },
-    '@media (min-width: 1024px)':{
-      marginTop: '8rem',
-      marginBottom: '8rem',
-    },
     '@media (min-width: 640px)': {
       width: '33%'
     },
     '@media (min-width: 768px)': {
       width: '28%',
+    },
+    '@media (min-width: 1024px)':{
+      marginTop: '8rem',
+      marginBottom: '8rem',
     }
-  
   },
   konfio: {
     backgroundColor: 'rgb(245 245 245)',
