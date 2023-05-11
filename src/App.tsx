@@ -1,10 +1,11 @@
-import React, { Fragment } from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Options from './components/Options/Options';
-import Benefits from './components/Benefits/Benefits';
-import Footer from './components/Footer/Footer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import bgImg from './images/doctor-wallpaper.jpg';
+import {
+  BrowserRouter as Router,
+  useRoutes,
+} from "react-router-dom";
+
+import Home from './pages/Home';
+import Location from './pages/Location'
 
 const theme = createTheme({
   typography: {
@@ -12,34 +13,25 @@ const theme = createTheme({
   }
 });
 
+const App = () => {
+  let routes = useRoutes([
+    { path: "/", element: <Home /> },
+    { path: "location", element: <Location /> },
+    // ...
+  ]);
+  return routes;
+};
 
-function App() {
+
+
+const AppWrapper  = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Fragment>
-        <Navbar />
-        <div id="bg-div" style={{
-          width: "100%",
-          height: "100vh",
-          position: 'relative'
-        }}>
-          <img src={bgImg} style={{
-            height: '100%',
-            width: '100%',
-            objectFit: 'cover',
-            position: 'absolute',
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: 0
-          }}></img>
-        </div>
-        <Options></Options>
-        <Benefits></Benefits>
-        <Footer></Footer>
-      </Fragment>
+      <Router>
+        <App />
+      </Router>
     </ThemeProvider>
   );
 }
 
-export default App;
+export default AppWrapper ;

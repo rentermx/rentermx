@@ -20,6 +20,7 @@ const baseColors = {
 
 const styles = (variant: 'konfio' | 'strive') => ({
   strive: {
+    fontWeight: 300,
     '& .footer-links-section': {
       display: 'grid',
       gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
@@ -29,7 +30,7 @@ const styles = (variant: 'konfio' | 'strive') => ({
     '& .footer-link-title': {
       color: baseColors.text,
       marginBottom: '1rem',
-      fontWeight: 600
+      fontWeight: 400
     },
     '& .footer-text': {
       color: baseColors.text,
@@ -91,6 +92,7 @@ const styles = (variant: 'konfio' | 'strive') => ({
     }
   },
   konfio: {
+    fontWeight: 300,
     '& .footer-links-section': {
       display: 'grid',
       gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
@@ -100,7 +102,7 @@ const styles = (variant: 'konfio' | 'strive') => ({
     '& .footer-link-title': {
       color: baseColors.text,
       marginBottom: '1rem',
-      fontWeight: 600
+      fontWeight: 400
     },
     '& .footer-text': {
       color: baseColors.text,
