@@ -49,7 +49,7 @@ const styles = (variant: 'konfio' | 'strive') => ({
     },
     '& .option-card-title': {
       fontSize: '1.5rem',
-      fontWeight: '600',
+      fontWeight: 600,
       marginBottom: '1.4rem',
       textAlign: 'center',
       color: baseColors.text

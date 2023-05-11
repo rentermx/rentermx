@@ -9,7 +9,7 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
 type OptionsProps = {};
 
-const StyledCard = styled('div')<OptionsProps>(({ theme }) => optionsStyles('konfio'));
+const StyledCard = styled('div')<OptionsProps>(({ theme }) => optionsStyles('strive'));
 
 const Options:React.FC<OptionsProps> = (props) => {
   const [ state, setState ] = useState(-1);

@@ -16,21 +16,41 @@ const baseColors = {
   black: '#212121'
 }
 
-const buttonStyles = (variant: 'strive' | 'konfio', theme?: Theme) => ({
-  '& .MuiButtonBase-root': {
-    textTransform: 'none'
+const styles = (variant: 'konfio' | 'strive') => ({
+  strive: {
+    '& .MuiButtonBase-root': {
+      textTransform: 'none'
+    },
+    backgroundColor: colors[variant].main,
+    padding: '10px 2rem !important',
+    fontWeight: 300,
+    fontSize: '0.875rem',
+    borderRadius: '25px',
+    border: `2px solid ${colors[variant].main}`,
+    color: baseColors.white,
+    '&:hover': {
+      backgroundColor: colors[variant].hover,
+      border: `2px solid ${colors[variant].hover}`
+    }
   },
-  backgroundColor: colors[variant].main,
-  padding: '10px 2rem !important',
-  fontWeight: 300,
-  fontSize: '0.875rem',
-  borderRadius: '25px',
-  border: `2px solid ${colors[variant].main}`,
-  color: baseColors.white,
-  '&:hover': {
-    backgroundColor: colors[variant].hover,
-    border: `2px solid ${colors[variant].hover}`
+  konfio: {
+    '& .MuiButtonBase-root': {
+      textTransform: 'none'
+    },
+    backgroundColor: colors[variant].main,
+    padding: '10px 2rem !important',
+    fontWeight: 300,
+    fontSize: '0.875rem',
+    borderRadius: '25px',
+    border: `2px solid ${colors[variant].main}`,
+    color: baseColors.white,
+    '&:hover': {
+      backgroundColor: colors[variant].hover,
+      border: `2px solid ${colors[variant].hover}`
+    }
   }
-});
+})
+
+const buttonStyles: any = (variant: 'strive' | 'konfio', theme?: Theme) => (styles(variant)[variant]);
 
 export default buttonStyles;

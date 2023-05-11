@@ -10,7 +10,7 @@ type FooterProps = {
 
 };
 
-const StyledFooter = styled('footer')(({ theme }) => footerStyles('konfio'));
+const StyledFooter = styled('footer')(({ theme }) => footerStyles('strive'));
 
 const Footer: React.FC<FooterProps> = () => {
   return (

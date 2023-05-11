@@ -22,7 +22,7 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 type NavbarProps = {};
 
-const StyledAppBar = styled(AppBar)<AppBarProps>(({ theme }) => navbarStyles('konfio'));
+const StyledAppBar = styled(AppBar)<AppBarProps>(({ theme }) => navbarStyles('strive'));
 
 const Navbar: React.FC<NavbarProps> = (props) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -70,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             component="a"
             href="/"
           >
-            NETFLIX
+            DENTCARE
           </Typography>
 
           <Box className="flex grow lg:hidden" >
@@ -115,7 +115,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             component="a"
             href=""
           >
-            NETFLIX
+            DENTCARE
           </Typography>
           <Box className="hidden grow lg:flex" >
             {pages.map((page) => (

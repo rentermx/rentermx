@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Options from './components/Options/Options';
+import Benefits from './components/Benefits/Benefits';
 import Footer from './components/Footer/Footer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import bgImg from './images/doctor-wallpaper.jpg';
@@ -34,6 +35,7 @@ function App() {
           }}></img>
         </div>
         <Options></Options>
+        <Benefits></Benefits>
         <Footer></Footer>
       </Fragment>
     </ThemeProvider>

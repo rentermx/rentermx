@@ -6,7 +6,7 @@ import buttonStyles from './ButtonStyles';
 
 type ButtonProps = Omit<{} & MuiButtonProps, 'variant'>
 
-const StyledButton = styled(MuiButton)<MuiButtonProps>(({ theme }) => buttonStyles('konfio'));
+const StyledButton = styled(MuiButton)<MuiButtonProps>(({ theme }) => buttonStyles('strive'));
 
 const Button = (props: ButtonProps) => {
   // @ts-ignore
