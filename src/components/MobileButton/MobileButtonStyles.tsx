@@ -17,10 +17,6 @@ const baseColors = {
 }
 
 const mobileButtonStyles = (variant: 'strive' | 'konfio', theme?: Theme) => ({
-  '& .MuiButtonBase-root': {
-    textTransform: 'none'
-  },
-  textDecoration: 'underline',
   fontWeight: 600,
   fontSize: '0.875rem',
   color: colors[variant].main

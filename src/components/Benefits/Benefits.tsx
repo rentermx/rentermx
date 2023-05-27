@@ -8,11 +8,11 @@ import benfitsImage3 from '../../images/benefits-image-3.jpg';
 
 type BenefitsProps = {}
 
-const StyledBenefits = styled('section')<BenefitsProps>(({ theme }) => benefitsStyles('strive'));
+const StyledBenefits = styled('section')<BenefitsProps>(({ theme }) => benefitsStyles('konfio'));
 
 const Benefits: React.FC<BenefitsProps> = (props) => {
   return (
-    <StyledBenefits>
+    <StyledBenefits id="benefits-section">
       <div className='container'>
         <div className='benefits-title'>¡Una gran solución para ti!</div>
         <div className='benefits-subsection'>

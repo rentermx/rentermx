@@ -29,8 +29,9 @@ const styles = (variant: 'konfio' | 'strive') => ({
       textAlign: 'center',
       color: baseColors.black,
       fontWeight: 600,
-      fontSize: '3.75rem',
-      marginBottom: '4rem'
+      fontSize: '1.75rem',
+      marginBottom: '4rem',
+      marginTop: '2rem'
     },
     '& .benefits-subsection': {
       display: 'flex',
@@ -80,7 +81,8 @@ const styles = (variant: 'konfio' | 'strive') => ({
         width: '45%',
       },
       '& .benefits-title': {
-        marginBottom: '10rem'
+        marginBottom: '10rem',
+        fontSize: '3.75rem',
       }
     },
   },
@@ -93,8 +95,9 @@ const styles = (variant: 'konfio' | 'strive') => ({
       textAlign: 'center',
       color: baseColors.black,
       fontWeight: 600,
-      fontSize: '3.75rem',
-      marginBottom: '4rem'
+      fontSize: '1.75rem',
+      marginBottom: '4rem',
+      marginTop: '2rem'
     },
     '& .benefits-subsection': {
       display: 'flex',
@@ -144,7 +147,8 @@ const styles = (variant: 'konfio' | 'strive') => ({
         width: '45%',
       },
       '& .benefits-title': {
-        marginBottom: '10rem'
+        marginBottom: '10rem',
+        fontSize: '3.75rem'
       }
     },
   }

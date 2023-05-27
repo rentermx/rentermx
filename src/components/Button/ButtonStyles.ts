@@ -18,9 +18,7 @@ const baseColors = {
 
 const styles = (variant: 'konfio' | 'strive') => ({
   strive: {
-    '& .MuiButtonBase-root': {
-      textTransform: 'none'
-    },
+    textTransform: 'none',
     backgroundColor: colors[variant].main,
     padding: '10px 2rem !important',
     fontWeight: 300,
@@ -34,9 +32,7 @@ const styles = (variant: 'konfio' | 'strive') => ({
     }
   },
   konfio: {
-    '& .MuiButtonBase-root': {
-      textTransform: 'none'
-    },
+    textTransform: 'none',
     backgroundColor: colors[variant].main,
     padding: '10px 2rem !important',
     fontWeight: 300,

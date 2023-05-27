@@ -18,15 +18,14 @@ import { styled } from '@mui/material/styles';
 import navbarStyles from './NavbarStyles';
 
 const pages = ['Servicios', 'Nosotros', 'Contacto'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pagesHref = ['/#options-section', '/#benefits-section', '/location'];
 
 type NavbarProps = {};
 
-const StyledAppBar = styled(AppBar)<AppBarProps>(({ theme }) => navbarStyles('strive'));
+const StyledAppBar = styled(AppBar)<AppBarProps>(({ theme }) => navbarStyles('konfio'));
 
 const Navbar: React.FC<NavbarProps> = (props) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
   const [ scrolled, setScrolled ] = useState(false);
 
   useEffect(() => {
@@ -46,16 +45,9 @@ const Navbar: React.FC<NavbarProps> = (props) => {
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -100,10 +92,12 @@ const Navbar: React.FC<NavbarProps> = (props) => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+              {pages.map((page, i) => (
+                <a key={`navbar-button-${i}`} href={pagesHref[i]} style={{color: 'inherit', textDecoration: 'none'}}>
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                </a>
               ))}
             </Menu>
           </Box>
@@ -118,12 +112,12 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             DENTCARE
           </Typography>
           <Box className="hidden grow lg:flex" >
-            {pages.map((page) => (
+            {pages.map((page, i) => (
               <MuiButton
                 id="navbar-menu-button"
                 key={page}
                 onClick={handleCloseNavMenu}
-                
+                href={pagesHref[i]}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
@@ -132,38 +126,12 @@ const Navbar: React.FC<NavbarProps> = (props) => {
           </Box>
 
           <Box className="grow-0">
-            <Tooltip title="Open settings">
-              <div>
-                <Button className='hidden lg:inline-block' onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  Quiero ser cliente
-                </Button>
-                <MobileButton className='inline-block lg:hidden'>
-                  Quiero ser cliente
-                </MobileButton>
-              </div>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            <Button href="/location" className="hidden lg:inline-block">
+              Quiero ser cliente
+            </Button>
+            <MobileButton href="/location" className="inline-block lg:hidden">
+              Quiero ser cliente
+            </MobileButton>
           </Box>
         </Toolbar>
       </Container>

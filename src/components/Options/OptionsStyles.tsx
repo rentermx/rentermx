@@ -98,9 +98,10 @@ const styles = (variant: 'konfio' | 'strive') => ({
       height: '100px',
       padding: '2rem',
       margin: '0 auto',
-      transition: 'transform 0.2s ease-in-out',
+      transition: 'transform 0.2s ease-in-out, color 0.2s ease-in-out',
       '&.hover-class': {
-        transform: 'scale(1.4)'
+        transform: 'scale(1.4)',
+        color: colors[variant].main
       }
     },
     '& .option-card-title': {

@@ -8,6 +8,12 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const path = (/#!(\/.*)$/.exec(window.location.hash) || [])[1];
+if (path) {
+  window.history.replaceState(null, "", path);
+}
+
 root.render(
   <React.StrictMode>
     <App />

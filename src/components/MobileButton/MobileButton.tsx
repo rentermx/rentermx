@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 import mobileButtonStyles from './MobileButtonStyles';
 
+
 type MobileButtonProps = {
   children?: React.ReactNode;
   className: string;
@@ -9,14 +10,15 @@ type MobileButtonProps = {
 
 const MobileButtonStyles = styled('a')<MobileButtonProps>(({ theme }) => mobileButtonStyles('konfio'));
 
-const MobileButton:React.FC<MobileButtonProps> = (props) => {
+const MobileButton:React.FC<MobileButtonProps & React.HTMLProps<HTMLAnchorElement>> = (props) => {
   const {
     children,
-    className
+    className,
+    href
   } = props;
 
   return (
-    <MobileButtonStyles className={className}>{children}</MobileButtonStyles>
+    <MobileButtonStyles className={className} href={href}>{children}</MobileButtonStyles>
   )
 }
 

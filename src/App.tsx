@@ -16,8 +16,7 @@ const theme = createTheme({
 const App = () => {
   let routes = useRoutes([
     { path: "/", element: <Home /> },
-    { path: "location", element: <Location /> },
-    // ...
+    { path: "location", element: <Location /> }
   ]);
   return routes;
 };
