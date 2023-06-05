@@ -28,16 +28,16 @@ const styles = (variant: 'konfio' | 'strive') => ({
       gap: '1.5rem',
     },
     '& .footer-link-title': {
-      color: baseColors.text,
+      color: baseColors.white,
       marginBottom: '1rem',
       fontWeight: 400
     },
     '& .footer-text': {
-      color: baseColors.text,
+      color: baseColors.white,
       marginBottom: '0.5rem'
     },
     '& .footer-link': {
-      color: baseColors.text,
+      color: baseColors.white,
       marginBottom: '0.5rem',
       listStyle: 'none',
       cursor: 'pointer',
@@ -51,7 +51,7 @@ const styles = (variant: 'konfio' | 'strive') => ({
       textAlign: 'center',
       paddingTop: '0.5rem',
       paddingBottom: '2rem',
-      color: baseColors.text,
+      color: baseColors.white,
       gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
     },
     '& .footer-media-button': {
@@ -64,7 +64,7 @@ const styles = (variant: 'konfio' | 'strive') => ({
       transition: '0.1s ease-in-out',
       '&:hover': {
         backgroundColor: colors[variant].hover,
-        color: baseColors.text
+        color: baseColors.white
       }
     },
     '@media (min-width: 640px)': {
@@ -100,16 +100,16 @@ const styles = (variant: 'konfio' | 'strive') => ({
       gap: '1.5rem',
     },
     '& .footer-link-title': {
-      color: baseColors.text,
+      color: baseColors.white,
       marginBottom: '1rem',
       fontWeight: 400
     },
     '& .footer-text': {
-      color: baseColors.text,
+      color: baseColors.white,
       marginBottom: '0.5rem'
     },
     '& .footer-link': {
-      color: baseColors.text,
+      color: baseColors.white,
       marginBottom: '0.5rem',
       listStyle: 'none',
       cursor: 'pointer',
@@ -123,7 +123,7 @@ const styles = (variant: 'konfio' | 'strive') => ({
       textAlign: 'center',
       paddingTop: '0.5rem',
       paddingBottom: '2rem',
-      color: baseColors.text,
+      color: baseColors.white,
       gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
     },
     '& .footer-media-button': {
@@ -136,7 +136,7 @@ const styles = (variant: 'konfio' | 'strive') => ({
       transition: '0.1s ease-in-out',
       '&:hover': {
         backgroundColor: colors[variant].hover,
-        color: baseColors.text
+        color: baseColors.white
       }
     },
     '@media (min-width: 640px)': {

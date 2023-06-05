@@ -16,7 +16,7 @@ const Benefits: React.FC<BenefitsProps> = (props) => {
       <div className='container'>
         <div className='benefits-title'>¡Una gran solución para ti!</div>
         <div className='benefits-subsection'>
-          <div className='benefits-subsection-image-container'>
+          <div className='benefits-subsection-image-container benefits-subsection-left-halo'>
             <Image className='benefits-subsection-image' src={benfitsImage1}></Image>
           </div>
           <div className='benefits-subsection-text'>
@@ -37,12 +37,12 @@ const Benefits: React.FC<BenefitsProps> = (props) => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repellat, corporis voluptatem hic necessitatibus accusamus quod nisi consectetur eum explicabo velit tempore magnam nesciunt, nostrum dolor nemo autem, quisquam eius.
             </div>
           </div>
-          <div className='benefits-subsection-image-container'>
+          <div className='benefits-subsection-image-container benefits-subsection-right-halo'>
             <Image className='benefits-subsection-image' src={benfitsImage2}></Image>
           </div>
         </div>
         <div className='benefits-subsection'>
-          <div className='benefits-subsection-image-container'>
+          <div className='benefits-subsection-image-container benefits-subsection-left-halo'>
             <Image className='benefits-subsection-image' src={benfitsImage3}></Image>
           </div>
           <div className='benefits-subsection-text'>

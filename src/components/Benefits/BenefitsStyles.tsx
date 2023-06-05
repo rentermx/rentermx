@@ -112,8 +112,7 @@ const styles = (variant: 'konfio' | 'strive') => ({
       objectFit: 'cover',
       overflow: 'hidden',
       height: '50vh',
-      borderRadius: '2rem',
-      boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'
+      borderRadius: '1rem'
     },
     '& .benefits-subsection-image-container': {
       width: '100%',
@@ -149,7 +148,35 @@ const styles = (variant: 'konfio' | 'strive') => ({
       '& .benefits-title': {
         marginBottom: '10rem',
         fontSize: '3.75rem'
-      }
+      },
+      '& .benefits-subsection-left-halo': {
+        position: 'relative',
+        '&:before': {
+          content: '""',
+          backgroundColor: colors[variant].main,
+          position: 'absolute',
+          zIndex: '-1',
+          top: '-3rem',
+          bottom: '-3rem',
+          left: '-3rem',
+          right: '15rem',
+          borderRadius: '1rem 0 0 1rem'
+        }
+      },
+      '& .benefits-subsection-right-halo': {
+        position: 'relative',
+        '&:before': {
+          content: '""',
+          backgroundColor: colors[variant].main,
+          position: 'absolute',
+          zIndex: '-1',
+          top: '-3rem',
+          bottom: '-3rem',
+          left: '15rem',
+          right: '-3rem',
+          borderRadius: '0 1rem 1rem 0'
+        }
+      },
     },
   }
 });

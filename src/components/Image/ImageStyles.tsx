@@ -25,7 +25,7 @@ const styles = (variant: 'konfio' | 'strive') => ({
   },
   konfio: {
     transition: 'opacity 1s ease-in-out',
-    opacity: 0,
+    opacity: 1, //Switch to zero when activating the animation
     '&.image-animation': {
       opacity: 1
     }

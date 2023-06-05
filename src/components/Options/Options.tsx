@@ -24,7 +24,7 @@ const Options:React.FC<OptionsProps> = (props) => {
 
   return (
     <section className='flex flex-col items-center' id="options-section">
-      <div className='container mt-[8rem] text-4xl lg:text-6xl font-semibold text-center mb-[4rem] lg:mb-[1rem]'>Todo lo que buscas lo encuentras aquí</div>
+      <div className='container mt-[2rem] lg:mt-[8rem] text-4xl lg:text-6xl font-semibold text-center mb-[4rem] lg:mb-[1rem]'>Todo lo que buscas lo encuentras aquí</div>
       <div className="container flex flex-col items-center justify-center lg:items-stretch lg:flex-row">
         <StyledCard onMouseEnter={() => handleMouseEnter(0)} onMouseLeave={() => handleMouseLeave(-1)}>
           <HealthAndSafetyIcon className={'option ' + (state === 0 ? 'hover-class' : '')} />
