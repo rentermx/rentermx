@@ -2,9 +2,9 @@ import React from 'react'
 import { styled } from '@mui/material/styles';
 import benefitsStyles from './BenefitsStyles';
 import Image from '../Image/Image';
-import benfitsImage1 from '../../images/benefits-image-1.jpg';
-import benfitsImage2 from '../../images/benefits-image-2.jpg';
-import benfitsImage3 from '../../images/benefits-image-3.jpg';
+import benfitsImage1 from '../../images/rentermx-benefits-1.jpg';
+import benfitsImage2 from '../../images/rentermx-benefits-2.jpg';
+import benfitsImage3 from '../../images/rentermx-benefits-3.jpg';
 
 type BenefitsProps = {}
 
@@ -21,20 +21,23 @@ const Benefits: React.FC<BenefitsProps> = (props) => {
           </div>
           <div className='benefits-subsection-text'>
             <div className='benefits-subsection-text-title'>
-              Adquiere los mejores beneficios de la ciudad!
+              Expande tu negocio más allá de las fronteras locales
             </div>
             <div className='benefits-subsection-text-subtitle'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quia eveniet, esse, repudiandae nisi amet, molestias reprehenderit minima fugiat cumque aperiam sequi! Necessitatibus, exercitationem nobis! Facilis, voluptate odit! Tempora, aperiam sed. Vero exercitationem facere explicabo neque nulla magni consequatur doloremque?
+              Una página web brinda la oportunidad de llegar a un público global las 24 horas del día, los 7 días de la semana, ya que
+              no estás limitado a una ubicación física específica.
+              Esto aumentará significativamente el alcance de tu negocio y te proporcionará acceso a nuevos clientes potenciales de todos lados.
             </div>
           </div>
         </div>
         <div className='benefits-subsection'>
           <div className='benefits-subsection-text'>
             <div className='benefits-subsection-text-title'>
-              Nosotros sí te damos la garantía que necesitas
+              Tendrás mayor visibilidad y marketing en línea
             </div>
             <div className='benefits-subsection-text-subtitle'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repellat, corporis voluptatem hic necessitatibus accusamus quod nisi consectetur eum explicabo velit tempore magnam nesciunt, nostrum dolor nemo autem, quisquam eius.
+              La presencia en línea a través de una página web te brinda una plataforma para aumentar tu visibilidad y promocionar tu negocio de manera efectiva.
+              Además, puedes utilizar las redes sociales y el contenido de calidad para atraer a tu público objetivo y generar interés en tus productos o servicios.
             </div>
           </div>
           <div className='benefits-subsection-image-container benefits-subsection-right-halo'>
@@ -47,10 +50,11 @@ const Benefits: React.FC<BenefitsProps> = (props) => {
           </div>
           <div className='benefits-subsection-text'>
             <div className='benefits-subsection-text-title'>
-              Estarás en manos de profesionales certificados
+              Mantente siempre conectado con tus clientes.
             </div>
             <div className='benefits-subsection-text-subtitle'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita vero placeat quisquam commodi ea unde quis consequuntur, ipsam provident impedit suscipit tempora perspiciatis facilis ipsa a vitae eos totam possimus magnam quae architecto aspernatur itaque dicta veniam? Quas, enim nisi!
+            Puedes proporcionar detalles sobre tus servicios, precios, horarios de atención, testimonios de clientes y otra información relevante de manera fácil y accesible.
+            Además, les permite a tus clientes mantenerse conectado contigo, lo que agiliza el proceso de venta y mejora la satisfacción del cliente.
             </div>
           </div>
           

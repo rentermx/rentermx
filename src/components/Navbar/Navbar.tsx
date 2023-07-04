@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             component="a"
             href="/"
           >
-            DENTCARE
+            RENTER
           </Typography>
 
           <Box className="flex grow lg:hidden" >
@@ -109,7 +109,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             component="a"
             href=""
           >
-            DENTCARE
+            RENTER
           </Typography>
           <Box className="hidden grow lg:flex" >
             {pages.map((page, i) => (

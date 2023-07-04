@@ -4,7 +4,6 @@ import Hero from '../components/Hero/Hero';
 import Options from '../components/Options/Options';
 import Benefits from '../components/Benefits/Benefits';
 import Footer from '../components/Footer/Footer';
-import bgImg from '../images/doctor-wallpaper.jpg';
 
 type HomeProps = {}
 

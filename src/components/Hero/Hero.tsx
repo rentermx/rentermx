@@ -1,7 +1,8 @@
 import React from "react";
 import { styled } from '@mui/material/styles';
 import heroStyles from './HeroStyles';
-import bgImg from '../../images/doctor-wallpaper.jpg';
+// import bgImg from '../../images/doctor-wallpaper.jpg';
+import bgImg from '../../images/rentermx-wallpaper.jpeg';
 import Button from "../Button/Button";
 
 type HeroProps = {
@@ -17,9 +18,12 @@ const Hero: React.FC<HeroProps> = () => {
       <div className="flex flex-col justify-center items-center p-8">
         <div className="max-w-screen-md flex flex-col justify-center items-center lg:max-w-sm">
           <div className="text-3xl text-center mb-4 md:text-4xl">
-            <span>Experimenta la confianza de una</span><span className="text-purple-700"> sonrisa radiante</span>
+            <span>Crea tú sitio web </span><br/><span className="text-purple-700"> sin límites</span>
           </div>
-          <div className="font-light text-center mb-8">Dentacare es la mejor opcion para un diseño de sonrisa en Guadalajara. Agenda ahora para experimentar una seguridad expectacular con una sonrisa radiante.</div>
+          <div className="font-light text-center mb-8">
+            Súbete a la era digital de forma sencilla y sin complicaciones.
+            Adquiere tu página web sin gastar una fortuna y dale a tu negocio el impulso que necesita.
+          </div>
           <Button href="/location">
             Quiero ser cliente
           </Button>  
