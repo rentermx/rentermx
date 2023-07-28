@@ -9,18 +9,18 @@ type HeroProps = {
 
 };
 
-const StyledHero = styled('footer')(({ theme }) => heroStyles('konfio'));
+const StyledHero = styled('section')(({ theme }) => heroStyles('strive'));
 
 const Hero: React.FC<HeroProps> = () => {
   return (
-    <section className="bg-white h-screen flex flex-col lg:flex-row">
-      <img src={bgImg} className="h-1/2 bg-center object-cover w-screen md:h-[60%] lg:w-[60%] lg:h-screen"/>
-      <div className="flex flex-col justify-center items-center p-8">
-        <div className="max-w-screen-md flex flex-col justify-center items-center lg:max-w-sm">
-          <div className="text-3xl text-center mb-4 md:text-4xl">
-            <span>Crea tú sitio web </span><br/><span className="text-purple-700"> sin límites</span>
+    <StyledHero>
+      <img src={bgImg} className="hero-img"/>
+      <div className="hero-container">
+        <div className="hero-text">
+          <div className="hero-title">
+            <span>Crea tú sitio web </span><br/><span className="hero-highlighted-text"> sin límites</span>
           </div>
-          <div className="font-light text-center mb-8">
+          <div className="hero-subtitle">
             Súbete a la era digital de forma sencilla y sin complicaciones.
             Adquiere tu página web sin gastar una fortuna y dale a tu negocio el impulso que necesita.
           </div>
@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = () => {
           </Button>  
         </div>
       </div>
-    </section>
+    </StyledHero>
   );
 };
 

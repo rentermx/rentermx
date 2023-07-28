@@ -38,8 +38,8 @@ const styles = (variant: 'konfio' | 'strive') => ({
     },
     '& .option': {
       backgroundColor: 'transparent',
-      width: '100px',
-      height: '100px',
+      width: '130px',
+      height: '130px',
       padding: '4rem 2rem 2rem 2rem',
       margin: '0 auto',
       transition: 'color 0.2s ease-in-out',
@@ -94,13 +94,13 @@ const styles = (variant: 'konfio' | 'strive') => ({
     },
     '& .option': {
       backgroundColor: 'transparent',
-      width: '100px',
-      height: '100px',
-      padding: '2rem',
+      width: '130px',
+      height: '130px',
+      padding: '4rem 2rem',
       margin: '0 auto',
       transition: 'transform 0.2s ease-in-out, color 0.2s ease-in-out',
       '&.hover-class': {
-        transform: 'scale(1.4)',
+        transform: 'scale(1.2)',
         color: colors[variant].main
       }
     },
@@ -123,7 +123,7 @@ const styles = (variant: 'konfio' | 'strive') => ({
       width: '50%'
     },
     '@media (min-width: 768px)': {
-      width: '33%',
+      width: '80%',
     },
     '@media (min-width: 1024px)':{
       marginTop: '8rem',

@@ -22,14 +22,14 @@ const styles = (variant: 'konfio' | 'strive') => ({
     position: 'fixed',
     boxShadow: 'none',
     zIndex: 1000,
-    color: baseColors.black,
+    color: baseColors.white,
     transition:  '0.32s ease-in-out',
     '& .MuiButtonBase-root': {
       textTransform: 'none'
     },
     '& .MuiButtonBase-root#navbar-menu-button': {
       fontWeight: 300,
-      color: baseColors.black,
+      color: baseColors.white,
       '&:hover': {
         backgroundColor: colors[variant].hover,
         color: baseColors.white
@@ -45,7 +45,14 @@ const styles = (variant: 'konfio' | 'strive') => ({
     '&.scrolled': {
       backgroundColor: 'white',
       boxShadow: '0 0 28px hsla(0,0%,50%,.5)',
-      padding: '3px 0'
+      padding: '3px 0',
+      color: baseColors.white,
+      '& .MuiButtonBase-root#navbar-menu-button': {
+        color: baseColors.black
+      },
+      '& #navbar-logo-container': {
+        color: baseColors.black
+      },
     }
   },
   konfio: {
