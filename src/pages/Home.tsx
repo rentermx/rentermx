@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Hero from '../components/Hero/Hero';
 import Options from '../components/Options/Options';
+import Carousel from '../components/Carousel/Carousel';
+import CTA from '../components/CTA/CTA';
 import Benefits from '../components/Benefits/Benefits';
 import Footer from '../components/Footer/Footer';
 
@@ -12,9 +14,11 @@ const Home:React.FC<HomeProps> = (props: HomeProps) => {
     <Fragment>
       <Navbar />
       <Hero />
-      <Options></Options>
-      <Benefits></Benefits>
-      <Footer></Footer>
+      <Options />
+      <Carousel />
+      <CTA />
+      <Benefits />
+      <Footer />
     </Fragment>
   )
 }
