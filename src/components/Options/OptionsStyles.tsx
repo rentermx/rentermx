@@ -32,24 +32,26 @@ const styles = (variant: 'konfio' | 'strive') => ({
     alignItems: 'center',
     padding: '2rem',
     flexDirection: 'column',
-    transition: 'box-shadow 0.5s',
+    border: '3px solid white',
+    transition: 'border 0.5s',
     '&:hover':{
-      boxShadow: `rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px`
+      border: `3px solid ${colors[variant].main}`
     },
     '& .option': {
       backgroundColor: 'transparent',
       width: '130px',
       height: '130px',
-      padding: '4rem 2rem 2rem 2rem',
+      padding: '4rem 2rem',
       margin: '0 auto',
-      transition: 'color 0.2s ease-in-out',
+      transition: 'transform 0.2s ease-in-out, color 0.2s ease-in-out',
       '&.hover-class': {
+        transform: 'scale(1.2)',
         color: colors[variant].main
       }
     },
     '& .option-card-title': {
       fontSize: '1.5rem',
-      fontWeight: 600,
+      fontWeight: '600',
       marginBottom: '1.4rem',
       textAlign: 'center',
       color: baseColors.text
@@ -60,14 +62,13 @@ const styles = (variant: 'konfio' | 'strive') => ({
     '& .option-card-subtitle': {
       textAlign: 'center',
       color: baseColors.text,
-      fontWeight: '300',
-      padding: '0 0 2rem 0'
+      fontWeight: '300'
     },
     '@media (min-width: 640px)': {
-      width: '33%'
+      width: '50%'
     },
     '@media (min-width: 768px)': {
-      width: '28%',
+      width: '80%',
     },
     '@media (min-width: 1024px)':{
       marginTop: '8rem',
