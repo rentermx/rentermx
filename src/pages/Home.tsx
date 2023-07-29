@@ -15,7 +15,6 @@ const Home:React.FC<HomeProps> = (props: HomeProps) => {
       <Navbar />
       <Hero />
       <Options />
-      <Carousel />
       <CTA />
       <Benefits />
       <Footer />

@@ -22,7 +22,7 @@ const pagesHref = ['/#options-section', '/#benefits-section', '/location'];
 
 type NavbarProps = {};
 
-const StyledAppBar = styled(AppBar)<AppBarProps>(({ theme }) => navbarStyles('konfio'));
+const StyledAppBar = styled(AppBar)<AppBarProps>(({ theme }) => navbarStyles('strive'));
 
 const Navbar: React.FC<NavbarProps> = (props) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
