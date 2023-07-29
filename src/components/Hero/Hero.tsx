@@ -9,7 +9,7 @@ type HeroProps = {
 
 };
 
-const StyledHero = styled('section')(({ theme }) => heroStyles('strive'));
+const StyledHero = styled('section')(({ theme }) => heroStyles('clip'));
 
 const Hero: React.FC<HeroProps> = () => {
   return (
